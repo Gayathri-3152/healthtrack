@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>employee_info</title>
+    <style>
+    *{
+box-sizing:border-box;
+}
+body{
+background-color:#008B8B;
+padding:10px
+}
+.header{
+padding:40px;
+text-align:center;
+background-image:url({{url_for('static',filename='header.jpg')}});
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:cover;
+color:black;
+font-weight:strong;
+font-family:algerian;
+font-size:40px;
+}
+.header h1{
+padding-top:40px;
+font-size:100px;
+}
+.topnav{
+overflow:hidden;
+background-color:#008080;
+font-weight:strong;
+font-family:algerian;
+font-size:25px;
+}
+.topnav a{
+float:left;
+display:block;
+color:black;
+font-weight:strong;
+text-align:center;
+padding:4px 16px;
+text-decoration:none;
+}
+td{
+padding:15px;
+text-align:center;
+}
+
+.topnav form{
+display:block;
+color:black;
+text-align:center;
+padding:4px 16px;
+text-decoration:none;
+}
+.topnav a:hover{
+background-color:#7FFFD4;
+color:black;
+}
+.leftcolumn{
+float:left;
+width:100%;
+background-color:#E0FFFF;
+}
+.card{
+padding:40px;
+margin-top:20px;
+}
+.row:after{
+content:"";
+display:table;
+clear:both;
+}
+.footer{
+padding:50px;
+background-color:#001000;
+color :#ffffff;
+}
+
+
+
+        table,th,td{
+            border:3px solid black;
+            border-collapse: collapse;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        td{
+            background-color:#FFFFFF
+        }
+        th,td{
+            padding:15px;
+            text-align:center;
+
+        }
+        th{
+            background-color:#E0FFFF
+
+        }
+
+
+
+    </style>
+</head>
+<body >
+ <div class="header">
+      <br><br><br>
+<h2>27/7 HEALTH CARE..<BR> WE CARE FOR YOU..</h2>
+</div>
+
+<div class="topnav">
+<a href="{{url_for('home')}}">HOME</a>
+<a href="{{url_for('dietChart')}}">DIET CHART</a>
+<a href="{{url_for('login')}}">LOG IN</a>
+<a href="{{url_for('signup')}}">SIGN UP</a>
+</div>
+
+<div class="leftcolumn">
+<div class="card">
+
+<table >
+
+    {% for row in record %}
+    {%if(row[1]==user)%}
+    <tr>
+        <th>
+            USER NAME
+        </th>
+
+        <th>
+            <b> {{row[1]}}</b>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            BLOOD PRESSURE
+        </td>
+         <td>
+            {{row[2]}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            BODY TEMPERATURE
+        </td>
+         <td>
+            {{row[3]}}F
+        </td>
+    </tr>
+    <tr>
+        <td>
+            OXYGEN SATURATION
+        </td>
+        <td>
+            {{row[4]}}%
+        </td>
+    </tr>
+    <tr>
+        <td>
+            RESPIRATION RATE
+        </td>
+        <td>
+            {{row[5]}}/min
+        </td>
+    </tr>
+    <tr>
+        <td>
+            HEART RATE
+        </td>
+        <td>
+            {{row[6]}}/min
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            BLOOD GLUCOSE
+        </td>
+        <td>
+            {{row[7]}}mg/dL
+        </td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+
+</table>
+
+<h4><Center><a href="{{url_for('mail')}}">click here</a>
+to Generate result </Center> </h4>
+
+</div>
+<div class="footer">
+<h4><pre>CONTACT US:<br>
+mail id:softwaresolution@gmail.com<br>
+instagram:software_solution<br>
+facebook:software_solution<br></pre></h4>
+</div>
+</div>
+
+<script>
+    window.setTimeout(function(){
+        window.location.reload(1);
+        },30000);
+</script>
+</body>
+</html>
+

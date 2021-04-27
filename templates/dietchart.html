@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+*{
+box-sizing:border-box;
+}
+body{
+background-color:#008B8B;
+padding:10px
+}
+.header{
+padding:40px;
+text-align:center;
+background-image:url({{url_for('static',filename='header.jpg')}});
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:cover;
+color:black;
+font-weight:strong;
+font-family:algerian;
+font-size:40px;
+}
+.header h1{
+padding-top:40px;
+font-size:100px;
+}
+.topnav{
+overflow:hidden;
+background-color:#008080;
+font-weight:strong;
+font-family:algerian;
+font-size:25px;
+}
+.topnav a{
+float:left;
+display:block;
+color:black;
+font-weight:strong;
+text-align:center;
+padding:4px 16px;
+text-decoration:none;
+}
+td{
+padding:15px;
+text-align:center;
+}
+
+.topnav form{
+display:block;
+color:black;
+text-align:center;
+padding:4px 16px;
+text-decoration:none;
+}
+.topnav a:hover{
+background-color:#7FFFD4;
+color:black;
+}
+.leftcolumn{
+float:left;
+width:100%;
+background-color:#E0FFFF;
+}
+.card{
+padding:40px;
+margin-top:20px;
+}
+.row:after{
+content:"";
+display:table;
+clear:both;
+}
+.footer{
+padding:50px;
+background-color:#001000;
+color :#ffffff;
+}
+
+@media screen and(max-width:800px)
+{
+.leftcolumn,.rightcolumn{
+width:100px;
+padding:0;
+}
+}
+#customer{
+font-family:arial,helvetica,sans-serif;
+border-collapse:collapse;
+width:100%;
+}
+#customer td,#customer th{
+border:1px solid #ddd;
+padding:8px;
+}
+#customer tr:nth-child(even){
+background-color:#f2f2f2;
+}
+#customer tr:hover{
+backgroung-color:#DDD;
+color:blue;
+}
+#customer th{
+padding-top:12px;
+padding-bottom:12px;
+text-align:center;
+background-color:#3CB371;
+color:black;
+}
+</style>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div class="header">
+      <br><br><br>
+<h2>YOU CAN'T ENJOY WEALTH <BR>IF YOU ARE NOT IN GOOD HEALTH</h2>
+</div>
+
+<div class="topnav">
+<a href="{{url_for('home')}}">HOME</a>
+<a href="{{url_for('dietChart')}}">DIET CHART</a>
+<a href="{{url_for('login')}}">LOG IN</a>
+<a href="{{url_for('signup')}}">SIGN UP</a>
+</div>
+
+<div class="leftcolumn">
+<div class="card">
+    <table id="customer">
+<tr>
+<th>DAY</th>
+<th>BREAKFAST</th>
+<th>BRUNCH</th>
+<th>LUNCH</th>
+<th>SNACKS</th>
+<th>DINNER</th>
+</tr>
+<tr>
+<td>MONDAY</td>
+<td>omlette</td>
+<td>almonds</td>
+<td>rice with vege curry</td>
+<td>green tea</td>
+<td>chappati roti</td>
+</tr>
+<tr>
+<td>TUESDAY</td>
+<td>idly</td>
+<td>walnut</td>
+<td>sambar rice</td>
+<td>grapes</td>
+<td>beans,legumes</td>
+</tr>
+<tr>
+<td>WEDNESDAY</td>
+<td>oats with some nuts</td>
+<td>sandwich</td>
+<td>spinach pitas</td>
+<td>coffee</td>
+<td>methi parantha</td>
+</tr>
+<tr>
+<td>THURSDAY</td>
+<td>berries</td>
+<td>cashews</td>
+<td>rajma salad</td>
+<td>dark chocolates</td>
+<td>baked chickpeas</td>
+</tr>
+<tr>
+<td>FRIDAY</td>
+<td>muffins,scones</td>
+<td>pistas</td>
+<td>moong dal khichdi</td>
+    <td>cold coffee</td>
+    <td>boiled potatoes</td>
+</tr>
+        <tr>
+            <td>SATURDAY</td>
+            <td>egg sandwich</td>
+            <td>ground nuts</td>
+            <td>brocolli</td>
+            <td>oats</td>
+            <td>chocolate skim milk</td>
+        </tr>
+
+        <tr>
+            <td>SUNDAY</td>
+            <td>fatty fish</td>
+            <td>apple</td>
+            <td>fatty meals</td>
+            <td>elachi tea</td>
+            <td>dosa</td>
+        </tr>
+
+</table>
+
+</div>
+<div class="footer">
+<h4><pre>CONTACT US:<br>
+mail id:softwaresolution@gmail.com<br>
+instagram:software_solution<br>
+facebook:software_solution<br></pre></h4>
+</div>
+</div>
+</body>
+</html>

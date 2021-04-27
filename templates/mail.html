@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel ="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
+  <style>
+      pre{
+           color:#ffffff;
+           text-align:center;
+           font-family: 'Open Sans';
+
+        }
+        .login-wrapper {
+            color :#fff;
+        }
+  </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="login">
+  <div class="login-wrapper">
+  <h1>Sign up</h1>
+    <div class="login-wrapper">
+<form method="post">
+    enter mail id
+    <input type="email" name="email" placeholder="mailid" required="required" />
+    password
+    <input type="password" name="password" placeholder="password" required="required" />
+
+     <button type="submit" class="btn btn-primary btn-block btn-large">Send mail</button>
+
+</form>
+    </div>
+  </div>
+    <pre>{{info}}</pre>
+</div>
+</body>
+</html>

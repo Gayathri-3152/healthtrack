@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel ="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
+    <style>
+        body{
+            background-image:url({{url_for('static',filename='bg_img1.png')}});
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:cover;
+        }
+        .login-wrapper {
+            background-color: #151515;
+            padding : 10px 15px 15px 15px;
+            color :#fff;
+        }
+        h4{
+            color:red;
+
+        }
+        pre{
+           color:#ffffff;
+           font-family: 'Open Sans';
+           text-align:center;
+        }
+        ::placeholder{
+            color:#9a9ada
+        }
+
+
+    </style>
+
+    <meta charset="UTF-8">
+    <title>login_page</title>
+</head>
+<body>
+
+<div class="login">
+  <div class="login-wrapper">
+  <h1>Login</h1>
+    <div class="login-wrapper">
+    <form method="post">
+        Login type
+        <input type="text" name="Admin/User" placeholder="Admin/User" AUTOCOMPLETE="off" required="required" />
+        Username
+      <input type="text" name="username" placeholder="Username" AUTOCOMPLETE="off" required="required" />
+        Password
+        <input type="password" name="password" placeholder="Password" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Let me in</button>
+    </form>
+        <pre><a href="{{url_for('signup')}}">click here</a> to sign up</pre>
+
+    </div>
+  </div>
+    <center> <h4>{{info}}</h4></center>
+</div>
+
+</body>
+</html>

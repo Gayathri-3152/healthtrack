@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel ="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
+    <style>
+        body{
+            background-image:url({{url_for('static',filename='bg_img1.png')}});
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:cover;
+        }
+        .login-wrapper {
+            background-color: #151515;
+            padding : 10px 15px 5px 15px;
+            color :#fff;
+        }
+        h4{
+            color:red;
+
+        }
+        h5{
+            color : #46A908;
+        }
+        pre{
+           color:#ffffff;
+           font-family: 'Open Sans';
+           text-align:center;
+        }
+        ::placeholder{
+            color:#9a9ada
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="login">
+  <div class="login-wrapper">
+  <h1>Sign up</h1>
+    <div class="login-wrapper">
+    <form method="post">
+      Username
+      <input type="text" name="username" placeholder="Username" AUTOCOMPLETE="off" required="required" />
+        Password
+        <input type="password" name="password" placeholder="Password" AUTOCOMPLETE="off" required="required" />
+        Full name
+      <input type="text" name="name" placeholder="name" AUTOCOMPLETE="off" required="required" />
+        Mail Id
+        <input type="text" name="mailid" placeholder="mail id" AUTOCOMPLETE="off" required="required" />
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Create account</button>
+        <pre><a href="{{url_for('login')}}">click here</a> to login</pre>
+
+    </form>
+
+    </div>
+  </div>
+
+      {%if(info=='"invalid user name"')%}
+      <center>  <h4> {{info}}</h4></center>
+        {%endif%}
+        {%if(info!='"invalid user name"')%}
+      <center> <h5>{{info}}</h5></center>
+         {%endif%}
+</div>
+</body>
+</html>

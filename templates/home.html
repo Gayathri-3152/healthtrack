@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+*{
+box-sizing:border-box;
+}
+body{
+background-color:#008B8B;
+padding:10px
+}
+.header{
+padding:40px;
+text-align:center;
+background-image:url({{url_for('static',filename='back1.jpg')}});
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:cover;
+color:black;
+font-weight:strong;
+font-family:algerian;
+font-size:40px;
+}
+.header h1{
+padding-top:40px;
+font-size:100px;
+}
+.topnav{
+overflow:hidden;
+background-color:#008080;
+font-weight:strong;
+font-family:algerian;
+font-size:25px;
+}
+.topnav a{
+float:left;
+display:block;
+color:black;
+font-weight:strong;
+text-align:center;
+padding:4px 16px;
+text-decoration:none;
+}
+.topnav form{
+display:block;
+color:black;
+text-align:center;
+padding:4px 16px;
+text-decoration:none;
+}
+.topnav a:hover{
+background-color:#7FFFD4;
+color:black;
+}
+.leftcolumn{
+float:left;
+width:100%;
+background-color:#E0FFFF;
+}
+.card{
+padding:40px;
+margin-top:20px;
+}
+.row:after{
+content:"";
+display:table;
+clear:both;
+}
+.footer{
+padding:50px;
+background-color:#001000;
+color :#ffffff;
+}
+
+@media screen and(max-width:800px)
+{
+.leftcolumn,.rightcolumn{
+width:100px;
+padding:0;
+}
+}
+</style>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div class="header">
+<h2>YOU CAN'T ENJOY WEALTH <BR>IF YOU ARE NOT IN GOOD HEALTH</h2>
+</div>
+
+<div class="topnav">
+<a href="{{url_for('home')}}">HOME</a>
+<a href="{{url_for('dietChart')}}">DIET CHART</a>
+<a href="{{url_for('login')}}">LOG IN</a>
+<a href="{{url_for('signup')}}">SIGN UP</a>
+</div>
+
+<div class="leftcolumn">
+<div class="card">
+<h1 style="text-align:center;"><i>eat healthy live healthy:)</i></h1>
+<h2><strong>OUR MAIN GOALS:</strong></h2>
+<h3><pre><i>     Health and Wellness in the work place is a vital part to a company’s success.<BR>
+Employees who are healthier and more productive are less likely to call out from sickness.<BR>
+There are not many companies that have affordable health care coverage for employees.<br>
+More companies should make healthcare affordable for their employees and their family.<br>
+Research has been done on how effective health and wellness programs can be in the workplace.<br>
+</i></pre></h3>
+<div  style="padding:20px;">
+<img height=200px width=300px; src="{{url_for('static',filename='pic3.jpg')}}">
+</div>
+<br>
+<h3><pre>The effectiveness of health and wellness in the workplace will also be spoken of.<br>
+Health and wellness activities in the workplace will be a positive move for companies and employees.<br>
+Companies have started to focus more on the employees health.<br>
+this site provide information to our employees about their health conditions and help them to recover or to prevent possible health issues</pre></h3>
+</div>
+<div class="footer">
+<h4><pre>CONTACT US:<br>
+mail id:softwaresolution@gmail.com<br>
+instagram:software_solution<br>
+facebook:software_solution<br></pre></h4>
+</div>
+</div>
+</body>
+</html>
